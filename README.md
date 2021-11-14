@@ -1,2 +1,4 @@
 # urlShortenerProject
-Back-end nodeJS, Typescript e Mongo para de encurtador de URL
+Back-end nodeJS, Typescript e Mongo para encurtador de URL
+
+...
