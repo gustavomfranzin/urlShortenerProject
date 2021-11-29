@@ -12,7 +12,7 @@ export class URLController {
             return
         }        
         const hash = shortId.generate()
-        const shortURL = `${config.API_URL}/${hash}`
+        const shortURL = `${'http://18.229.118.97:5000'}/${hash}`
         const newURL = await URLModel.create({ hash, shortURL, originURL })
         res.json(newURL)
     }

@@ -14,7 +14,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.URLController = void 0;
 const shortid_1 = __importDefault(require("shortid"));
-const Constants_1 = require("../config/Constants");
 const URL_1 = require("../database/model/URL");
 class URLController {
     shorten(req, res) {
@@ -26,7 +25,7 @@ class URLController {
                 return;
             }
             const hash = shortid_1.default.generate();
-            const shortURL = `${Constants_1.config.API_URL}/${hash}`;
+            const shortURL = `${'http://18.229.118.97:5000'}/${hash}`;
             const newURL = yield URL_1.URLModel.create({ hash, shortURL, originURL });
             res.json(newURL);
         });
